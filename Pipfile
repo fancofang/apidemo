@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+python-dotenv = "*"
+wtforms = "*"
+flask-sqlalchemy = "*"
+flask-login = "*"
+email-validator = "*"
+flask-httpauth = "*"
+mysql-connector = "*"
+mysqlclient = "*"
+werkzeug = "==0.16.1"
+authlib = "*"
+pyopenssl = "*"
+sphinx = "*"
+
+[requires]
+python_version = "3.7"

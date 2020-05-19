@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <h2 class="ui teal image header">
+            <div class="content">
+                Log in to your account
+            </div>
+        </h2>
+        <div class="ui">
+            <form class="ui large form" method="post">
+                <div class="ui stacked segment">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="email" placeholder="E-mail address">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input class="ui fluid large teal submit button" type="submit" value="Log in">
+                    </div>
+                    <div class="field">
+                        <a class="ui button fluid gap" href="{{ url_for('auth.register') }}">
+                            Sign Up
+                        </a>
+                    </div>
+                </div>
+              <div class="ui error message"></div>
+            </form>
+        </div>
+
+        <div class="ui">
+            <a class="link" href="{{ url_for('oauth.login', provider_name='facebook') }}">
+                <button class="ui facebook button fluid gap">
+                    <i class="facebook icon"></i>
+                    Facebook
+                </button>
+            </a>
+            <a class="link" href="{{ url_for('oauth.login', provider_name='twitter') }}">
+                <button class="ui twitter button fluid gap">
+                    <i class="twitter icon"></i>
+                    Twitter
+                </button>
+            </a>
+            <a class="link" href="{{ url_for('oauth.login', provider_name='github') }}">
+                <button class="ui github button fluid black gap">
+                    <i class="github icon"></i>
+                    Github
+                </button>
+            </a>
+            <a href="{{ url_for('oauth.login', provider_name='google') }}">
+                <button class="ui google button fluid red gap">
+                    <i class="google icon"></i>
+                    Google
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

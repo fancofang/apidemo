@@ -9,13 +9,13 @@ index_bp = Blueprint('bp',__name__)
 def index():
     return jsonify({
         "api_version": "1.0",
-        "api_base_url": "http://127.0.0.1:5000/api/v1",
-        "website_log_in_url": "http://127.0.0.1:5000/login",
-        "api_register_url": "http://127.0.0.1:5000/api/v1/register",
-        "api_get_token_url": "http://127.0.0.1:5000/api/v1/token",
-        "api_current_user_url": "http://127.0.0.1:5000/api/v1/user",
-        "api_item_search_url": "http://127.0.0.1:5000/api/v1/book/search?q={name}",
-        "api_item_detail_url": "http://127.0.0.1:5000/api/v1/book/{isbn or isbn13}"
+        "api_base_url": "http://3.9.215.67:9999/api/v1",
+        "website_log_in_url": "http://3.9.215.67:9999/login",
+        "api_register_url": "http://3.9.215.67:9999/api/v1/register",
+        "api_get_token_url": "http://3.9.215.67:9999/api/v1/token",
+        "api_current_user_url": "http://3.9.215.67:9999/api/v1/user",
+        "api_item_search_url": "http://3.9.215.67:9999/api/v1/book/search?q={name}",
+        "api_item_detail_url": "http://3.9.215.67:9999/api/v1/book/{isbn or isbn13}"
     })
 
 

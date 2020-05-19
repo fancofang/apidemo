@@ -8,7 +8,6 @@ class Config():
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'sqlite:///' + os.path.join(basedir, 'data.db'))
-    SQLALCHEMY_BINDS = {'book': 'mysql://root:88818928@localhost:3306/book'}
     SQLALCHEMY_BINDS = {'book': 'mysql://' + os.getenv('MYSQL_USER', 'root') \
                                 + ':' + os.getenv('MYSQL_PASSWORD', '')\
                                 + '@localhost:3306/book'}

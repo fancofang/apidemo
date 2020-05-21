@@ -10,10 +10,9 @@ from . import api_v1
 
 @api_v1.route('/user', methods=['GET'])
 def get_user():
-    """
-    Get user detail
+    """Get user detail
 
-    :url: http://127.0.0.1:5000/api/v1/user
+    :url: http://3.9.215.67:9999/api/v1/user
     :method: GET
     :authorization: Bearer
     :return: return email, register from and authorization
@@ -34,10 +33,9 @@ def update_user():
 
 @api_v1.route('/user', methods=['DELETE'])
 def delete_user():
-    """
-    Delete user
+    """Delete user
 
-    :url: http://127.0.0.1:5000/api/v1/user
+    :url: http://3.9.215.67:9999/api/v1/user
     :method: DELETE
     :authorization: Bearer
     :return: delete the current user, return success

@@ -10,16 +10,21 @@ from app.extensions import db
 
 @api_v1.route('/register', methods=['POST'])
 def create_client():
-    """
-    Register user
+    """Register user.
 
-    :url: http://127.0.0.1:5000/api/v1/register
+    .. note::
+        The body need to be json type.
+
+    :url: http://3.9.215.67:9999/api/v1/register
     :method: POST
-    :param: account, password
-    :return: return result
-    :example: {
+    :param account: email.
+    :type account: str
+    :param password: at least 6 digits.
+    :type password: str
+    :return: result
+    :example: `{
             "account": "guest@hotmail.com",
-            "password":"12345678"}
+            "password":"12345678"}`
     """
     form = ClientForm(data=request.json)
     form.validate_for_api()
@@ -45,18 +50,23 @@ def _register_user_by_email():
 
 @api_v1.route('/token', methods=['POST'])
 def get_token():
-    """
-    Get user token
+    """Get user token.
 
-    :url: http://127.0.0.1:5000/api/v1/token
+    .. note::
+        The body need to be json type.
+
+    :url: http://3.9.215.67:9999/api/v1/token
     :method: POST
-    :param: account, password
-    :return: return token, expiration, scope
-    :example: {
+    :param account: email.
+    :type account: str
+    :param password: at least 6 digits.
+    :type password: str
+    :return: token, expiration, scope
+    :example: `{
         "Authorization": "Bearer",
         "Expire_in": "12 Jun 2020 21:35:23 Localtime",
         "Scope": "UserScope",
-        "Token": "eyJlA..."}
+        "Token": "eyJlA..."}`
     """
     form = ClientForm(data=request.json)
     form.validate_for_api()

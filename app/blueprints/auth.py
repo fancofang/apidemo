@@ -10,6 +10,16 @@ auth_bp = Blueprint('auth', __name__)
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
+    """Log in from website.
+
+    It is easy to log in by third party.
+
+    .. note::
+        Due to Facebook only let authorizing by 'https' protocal, and this is a 'http' protocal website demo, so you can not log in by Facebook successfully.
+
+    :url: http://3.9.215.67:9999/login
+    :return: token, expiration, scope
+    """
     if request.method == 'POST':
         data = request.form
         email = data['email']
@@ -24,7 +34,11 @@ def login():
 
 @auth_bp.route('/register', methods=['GET', 'POST'])
 def register():
+    """Register from website.
 
+    :url: http://3.9.215.67:9999/register
+    :return: result
+    """
     if request.method == 'POST':
         data = request.form
         email = data['email']

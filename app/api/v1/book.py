@@ -8,10 +8,9 @@ from app.models import Book
 
 @api_v1.route('/book/search')
 def search():
-    """
-    Searching on keyword
+    """Searching book on keyword
 
-    :Url: http://127.0.0.1:5000/api/v1/book/search?q=<keyword>
+    :Url: http://3.9.215.67:9999/api/v1/book/search?q=<keyword>
     :Method: GET
     :Authorization: Bearer
     :param: something about the book. For exmaple book name, author, publisher, isbn, isbn13
@@ -34,10 +33,9 @@ def search():
 
 @api_v1.route('/book/<isbn>')
 def detail(isbn):
-    """
-    The detail of book
+    """The detail of book
 
-    :url: http://127.0.0.1:5000/api/v1/book/{isbn or isbn13}
+    :url: http://3.9.215.67:9999/api/v1/book/{isbn or isbn13}
     :method: GET
     :authorization: Bearer
     :param: isbn or isbn13

@@ -1,0 +1,14 @@
+index
+======================
+
+
+.. automodule:: app.blueprints.index
+   :members: index
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: app.blueprints.auth
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

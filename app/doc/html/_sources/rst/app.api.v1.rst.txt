@@ -1,0 +1,29 @@
+api.v1
+==================
+
+Book
+----------------------
+
+.. automodule:: app.api.v1.book
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Token
+------------------------
+
+.. automodule:: app.api.v1.client
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+User
+----------------------
+
+.. automodule:: app.api.v1.user
+   :members: get_user, delete_user
+   :undoc-members:
+   :show-inheritance:
+

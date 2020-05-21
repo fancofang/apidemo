@@ -1,0 +1,243 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>api.v1 &#8212; Apidemo 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="index" href="app.blueprints.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../index.html">Apidemo 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">api.v1</a><ul>
+<li><a class="reference internal" href="#module-app.api.v1.book">Book</a></li>
+<li><a class="reference internal" href="#module-app.api.v1.client">Token</a></li>
+<li><a class="reference internal" href="#module-app.api.v1.user">User</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="app.blueprints.html"
+                        title="previous chapter">index</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-v1">
+<h1>api.v1<a class="headerlink" href="#api-v1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-app.api.v1.book">
+<span id="book"></span><h2>Book<a class="headerlink" href="#module-app.api.v1.book" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="app.api.v1.book.detail">
+<code class="sig-name descname">Book detail</code><a class="headerlink" href="#app.api.v1.book.detail" title="Permalink to this definition">¶</a></dt>
+<dd><p>The detail of book</p>
+<dl class="field-list simple">
+<dt class="field-odd">Url</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://3.9.215.67:9999/api/v1/book">http://3.9.215.67:9999/api/v1/book/{isbn or isbn13}</a></p>
+</dd>
+<dt class="field-even">Method</dt>
+<dd class="field-even"><p>GET</p>
+</dd>
+<dt class="field-odd">Authorization</dt>
+<dd class="field-odd"><p>Bearer</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>isbn or isbn13</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>detail</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.api.v1.book.search">
+<code class="sig-name descname">Book search</code><a class="headerlink" href="#app.api.v1.book.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searching book on keyword</p>
+<dl class="field-list simple">
+<dt class="field-odd">Url</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://3.9.215.67:9999/api/v1/book/search">http://3.9.215.67:9999/api/v1/book/search?q=&lt;keyword&gt;</a></p>
+</dd>
+<dt class="field-even">Method</dt>
+<dd class="field-even"><p>GET</p>
+</dd>
+<dt class="field-odd">Authorization</dt>
+<dd class="field-odd"><p>Bearer</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>something about the book. For exmaple book name, author, publisher, isbn, isbn13</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the set of result</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.api.v1.client">
+<span id="token"></span><h2>Token<a class="headerlink" href="#module-app.api.v1.client" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="app.api.v1.client.create_client">
+<code class="sig-name descname">Register from api</code><a class="headerlink" href="#app.api.v1.client.create_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register user.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The body need to be json type.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Url</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://3.9.215.67:9999/api/v1/register">http://3.9.215.67:9999/api/v1/register</a></p>
+</dd>
+<dt class="field-even">Method</dt>
+<dd class="field-even"><p>POST</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>account</strong> (<em>str</em>) – email.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – at least 6 digits.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p><cite>{
+“account”: “guest&#64;hotmail.com”,
+“password”:”12345678”}</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.api.v1.client.get_token">
+<code class="sig-name descname">Get token</code><a class="headerlink" href="#app.api.v1.client.get_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get user token.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The body need to be json type.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Url</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://3.9.215.67:9999/api/v1/token">http://3.9.215.67:9999/api/v1/token</a></p>
+</dd>
+<dt class="field-even">Method</dt>
+<dd class="field-even"><p>POST</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>account</strong> (<em>str</em>) – email.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – at least 6 digits.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>token, expiration, scope</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p><cite>
+{<br>
+“Authorization”: “Bearer”,<br>
+“Expire_in”: “12 Jun 2020 21:35:23 Localtime”,<br>
+“Scope”: “UserScope”,<br>
+“Token”: “eyJlA…”<br>
+}</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.api.v1.user">
+<span id="user"></span><h2>User<a class="headerlink" href="#module-app.api.v1.user" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="app.api.v1.user.get_user">
+<code class="sig-name descname">Get user</code><a class="headerlink" href="#app.api.v1.user.get_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get current user detail</p>
+<dl class="field-list simple">
+<dt class="field-odd">Url</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://3.9.215.67:9999/api/v1/user">http://3.9.215.67:9999/api/v1/user</a></p>
+</dd>
+<dt class="field-even">Method</dt>
+<dd class="field-even"><p>GET</p>
+</dd>
+<dt class="field-odd">Authorization</dt>
+<dd class="field-odd"><p>Bearer</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return email, register from and authorization</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.api.v1.user.delete_user">
+<code class="sig-name descname">Delete user</code><a class="headerlink" href="#app.api.v1.user.delete_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Url</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://3.9.215.67:9999/api/v1/user">http://3.9.215.67:9999/api/v1/user</a></p>
+</dd>
+<dt class="field-even">Method</dt>
+<dd class="field-even"><p>DELETE</p>
+</dd>
+<dt class="field-odd">Authorization</dt>
+<dd class="field-odd"><p>Bearer</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>delete the current user, return success</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Fanco.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
+    </div>
+  </body>
+</html>

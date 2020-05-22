@@ -9,6 +9,7 @@ class Config():
     SQLALCHEMY_BINDS = {'book': 'mysql://' + os.getenv('MYSQL_USER', 'root') \
                                 + ':' + os.getenv('MYSQL_PASSWORD', '')\
                                 + '@localhost:3306/book'}
+    JSONIFY_PRETTYPRINT_REGULAR = True
 
 
 class DevelopmentConfig(Config):
